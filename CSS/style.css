@@ -1,0 +1,18 @@
+.hero {
+  background-image: url("../img/wall.png");
+  height: 100px;
+  text-align: center;
+}
+.photo-card {
+  width: 300px;
+  box-shadow: 0 5px 15px;
+  padding: 15px;
+}
+.photo-img {
+  height: 250px;
+  background-image: url(https://wallpapers.com/images/featured/le-migliori-immagini-fantastiche-40lkhq7b7tl3p1qw.jpg);
+  background-size: cover;
+}
+.photo-text {
+  margin: 10px;
+}
