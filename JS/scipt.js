@@ -1,4 +1,3 @@
-const redDotImage = "img/pin.svg";
 fetch("https://lanciweb.github.io/demo/api/pictures/")
   .then((response) => response.json())
   .then((data) => {
@@ -18,6 +17,19 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
 
 `;
       container.appendChild(cardCol);
+
+      const img = cardCol.querySelector("img-click");
+      addEventListener("click", () => {
+        const overlay = document.getElementById("overlay");
+        const overlayImg = document.getElementById("overlay-img");
+        overlayImg.src = item.url;
+        overlay.classList.remove("d-none");
+      });
     });
-  })
-  .catch((error) => console.error("Errore:", error));
+  });
+const closeBtn = document.getElementById("close-btn");
+const overlay = document.getElementById("overlay");
+
+closeBtn.addEventListener("click", () => {
+  overlay.classList.add("d-none");
+});
